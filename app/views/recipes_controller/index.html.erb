@@ -1,2 +1,19 @@
-<h1>RecipesController#index</h1>
-<p>Find me in app/views/recipes_controller/index.html.erb</p>
+<h1>Search for "<%= @query %>"</h1>
+
+<table border="1">
+  <tr>
+    <th>Thumbnail</th>
+    <th>Title</th>
+    <th>Rank</th>
+  </tr>
+
+  <% @recipes.each do |recipe| %>
+
+  <tr>
+    <td><%= image_tag recipe["image_url"] %></td>
+    <td><%= recipe["title"] %></td>
+    <td><%= recipe["social_rank"] %></td>
+  </tr>
+  
+  <% end %>
+</table>

@@ -8,12 +8,11 @@
   </tr>
 
   <% @recipes.each do |recipe| %>
-
   <tr>
-    <td><%= image_tag recipe["image_url"] %></td>
+    <td><%= image_tag recipe["image_url"], size: "250x120" %></td>
     <td><%= recipe["title"] %></td>
     <td><%= recipe["social_rank"] %></td>
   </tr>
-  
   <% end %>
+  
 </table>

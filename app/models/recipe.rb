@@ -1,5 +1,3 @@
-# require('httparty')
-
 class Recipe
   include HTTParty
   
@@ -14,5 +12,3 @@ class Recipe
     get("/search", query: {q: term})["recipes"]
   end
 end
-
-# p Recipe.for "chicken"
